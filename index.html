@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreeGames</title>
+  <link rel="shortcut icon" href="Images/download.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <div class="slider" x-data="{start: true, end: false}" style="padding-top: 150px;">
+    <div class="slider__content" x-ref="slider" x-on:scroll.debounce="$refs.slider.scrollLeft == 0 ? start = true : start = false; Math.abs(($refs.slider.scrollWidth - $refs.slider.offsetWidth) - $refs.slider.scrollLeft) < 5 ? end = true : end = false;">
+      <div class="slider__item">
+       <a href="https://itzmitoma.github.io/snake-game"> <img class="slider__image" src="./Images/Screenshot (13).png" alt="Image"></a>
+        <div class="slider__info">
+          <a href="https://itzmitoma.github.io/snake-game/"><h2>Snake</h2></a>
+        </div>
+      </div>
+      <div class="slider__item">
+        <a href="https://itzmitoma.github.io/FlappyBird/"><img class="slider__image" src="./Images/Screenshot (12).png" alt="Image"></a>
+        <div class="slider__info">
+          <a href="https://itzmitoma.github.io/FlappyBird/"><h2>FlappyBird</h2></a>
+        </div>
+      </div>
+      <div class="slider__item">
+        <a href="https://itzmitoma.github.io/Space-Invaders/"><img class="slider__image" src="./Images/Screenshot (15).png" alt="Image"></a>
+        <div class="slider__info">
+          <a href="https://itzmitoma.github.io/Space-Invaders/"><h2>Space Invaders</h2></a>
+        </div>
+      </div>
+      <div class="slider__item">
+        <a href="https://itzmitoma.github.io/Pong/"><img class="slider__image" src="./Images/Screenshot (11).png" alt="Image"></a>
+        <div class="slider__info">
+          <a href="https://itzmitoma.github.io/Pong/"><h2>Pong</h2></a>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="/img/dragon-scales (3).svg" alt="Image">
+        <div class="slider__info">
+          <h2>Comming soon</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="/img/liquid-cheese.png" alt="Image">
+        <div class="slider__info">
+          <h2>Comming soon</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="/img/pattern_circles-1_1_16_0-0_0_1__2a2b37_ffeba8_ffeba8.png" alt="Image">
+        <div class="slider__info">
+          <h2>Comming soon</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="/img/dragon-scales (2).svg" alt="Image">
+        <div class="slider__info">
+          <h2>Comming soon</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="/img/protruding-squares.png" alt="Image">
+        <div class="slider__info">
+          <h2>Comming soon</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="/img/radiant-gradient.png" alt="Image">
+        <div class="slider__info">
+          <h2>Comming soon</h2>
+        </div>
+      </div>
+    </div>
+    <div class="slider__nav" style="display: flex;justify-content: center;">
+      <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth * -1, behavior: 'smooth'});" x-bind:class="start ? '' : 'slider__nav__button--active'">Previous</button>
+      <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth, behavior: 'smooth'});" x-bind:class="end ? '' : 'slider__nav__button--active'">Next</button>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.js"></script>
+</body>
+</html>
+
